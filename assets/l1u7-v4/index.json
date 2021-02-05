@@ -1,0 +1,3449 @@
+[
+    {
+        "index": 0,
+        "commonImageList":[
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/db/common/book_ai.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/P1_Introduce/BG.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/d-snake.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/common/general-bg.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/d-tiger.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/s2_1.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/s2_2.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/s3_3.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/s2_4.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/img/ScrollBg/d-monkey.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/db/common/dino.png",
+            "//ic-static-ali.vipkid.com.cn/course/material/VF_trial_L1U7/static/db/common/monkey1new.png"
+
+        ],
+        "commonVideoList": [
+            "p00-still-1s-v3.mp4",
+            "p00-still-1s-blink.mp4"
+        ],
+        "videoList": [
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1000
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 1,
+        "videoList": [
+            "p02-s01.mp4",
+            "p02-s02.mp4",
+            "p02-s04.mp4",
+            "p02-s05.mp4",
+            "p02-s06.mp4",
+            "p02-s07.mp4",
+            "p02-s08.mp4",
+            "p02-s02-b02.mp4",
+            "p02-s07-b02.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s01.mp4",
+                        "time": 13500
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s02.mp4",
+                        "time": 16000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "i am steph|yes",
+                        "keyWords": "i|am|steph",
+                        "time": 5000
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s02-b02.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s04.mp4",
+                        "time": 14000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 2,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s05.mp4",
+                        "time": 8000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "my name is dino|yes",
+                        "keyWords": "my|name|is|dino|yes",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucessrecorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s06.mp4",
+                        "time": 7500
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "you are steph|yes",
+                        "keyWords": "you|are|steph",
+                        "time": 3000
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "sayHelloBtn",
+                            "1-UIContainer",
+                            "1"
+                        ]
+                    },
+                    {
+                        "type": "ActionCursewareSoundEnd",
+                        "key": "audios"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s07.mp4",
+                        "time": 13000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "hello dino|yes",
+                        "keyWords": "hello|dino|yes",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s07-b02.mp4",
+                        "time": 6000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p02-s08.mp4",
+                        "time": 7500
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "nextBtn",
+                            "1-UIContainer",
+                            "1"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 9000
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 2,
+        "videoList": [
+            "p04-s01.mp4",
+            "p04-s02.mp4",
+            "p04-s03.mp4",
+            "p04-s04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p04-s01.mp4",
+                        "time": 9500
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "startBtn",
+                            "TrialAudioPlayer",
+                            "2-UIContainer",
+                            "2"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 5000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p04-s02.mp4",
+                        "time": 8000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "yes",
+                        "keyWords": "yes",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p04-s03.mp4",
+                        "time": 5000
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p04-s04.mp4",
+                        "time": 5500
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 3,
+        "videoList": [
+            "p05-s01.mp4",
+            "p05-s02.mp4",
+            "p05-s02-b02.mp4",
+            "p05-s03.mp4",
+            "p05-s04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p05-s01.mp4",
+                        "time": 5000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 4000,
+                        "runCount": 1,
+                        "timeOutGoto": "timeOut",
+                        "gotoStep": "allClick",
+                        "isAllComplete": "allClick",
+                        "keys": [
+                            {
+                                "key": "child_1",
+                                "path": [
+                                    "child_1",
+                                    "3-UIContainer",
+                                    "3"
+                                ],
+                                "pos": [
+                                    50,
+                                    -150
+                                ],
+                                "gotoStep": "allClick"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 5000,
+                        "url": "p05-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "allClick": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "child_1",
+                            "3-UIContainer",
+                            "3"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p05-s02.mp4",
+                        "time": 15500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed",
+                        "allFailedGotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "mokey|it's a mokey",
+                        "keyWords": "mokey",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p05-s02-b02.mp4",
+                        "time": 3500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p05-s03.mp4",
+                        "time": 6000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p05-s04.mp4",
+                        "time": 24000
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 4,
+        "videoList": [
+            "p06-s01.mp4",
+            "p06-s01-b02.mp4",
+            "p06-s02.mp4",
+            "p06-s03.mp4",
+            "p06-s04.mp4",
+            "p06-s05.mp4",
+            "p06-s06.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s01.mp4",
+                        "time": 12000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 5000,
+                        "runCount": 1,
+                        "timeOutGoto": "timeOut",
+                        "gotoStep": "allClick",
+                        "isAllComplete": "allClick",
+                        "keys": [
+                            {
+                                "key": "monkey_left",
+                                "path": [
+                                    "monkey_left",
+                                    "4-UIContainer",
+                                    "4"
+                                ],
+                                "pos": [
+                                    -50,
+                                    -50
+                                ],
+                                "gotoStep": "monkey_left"
+                            },
+                            {
+                                "key": "monkey_center",
+                                "path": [
+                                    "monkey_center",
+                                    "4-UIContainer",
+                                    "4"
+                                ],
+                                "pos": [
+                                    -20,
+                                    -80
+                                ],
+                                "gotoStep": "monkey_center"
+                            },
+                            {
+                                "key": "monkey_right",
+                                "path": [
+                                    "monkey_right",
+                                    "4-UIContainer",
+                                    "4"
+                                ],
+                                "pos": [
+                                    70,
+                                    -150
+                                ],
+                                "gotoStep": "monkey_right"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 2000,
+                        "url": "p06-s01-b02.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "monkey_left": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "monkey_left",
+                            "4-UIContainer",
+                            "4"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "4-UIContainer",
+                            "4"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s02.mp4",
+                        "time": 6000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "monkey_center": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "monkey_center",
+                            "4-UIContainer",
+                            "4"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "4-UIContainer",
+                            "4"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s02.mp4",
+                        "time": 6000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "monkey_right": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "monkey_right",
+                            "4-UIContainer",
+                            "4"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "4-UIContainer",
+                            "4"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "click"
+                    }
+                ],
+                "allClick": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s03.mp4",
+                        "time": 5000
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s04.mp4",
+                        "time": 26500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed",
+                        "allFailedGotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "monkey|i see three monkey",
+                        "keyWords": "monkey|see|three",
+                        "time": 5000
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s06.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p06-s05.mp4",
+                        "time": 9000
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 5,
+        "videoList": [
+            "p07-s01.mp4",
+            "p07-s02.mp4",
+            "p07-s03.mp4",
+            "p07-s04.mp4",
+            "p07-s05.mp4",
+            "p07-s06.mp4",
+            "p07-s07.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s01.mp4",
+                        "time": 7000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 5000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "child_3",
+                                "path": [
+                                    "child_3",
+                                    "5-UIContainer",
+                                    "5"
+                                ],
+                                "pos": [
+                                    20,
+                                    -50
+                                ],
+                                "gotoStep": "clickTiger"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 7000,
+                        "url": "p07-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickTiger": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickTiger"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "child_3",
+                            "5-UIContainer",
+                            "5"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1000,
+                        "gotoStep": "ask1"
+                    }
+                ],
+                "ask1": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s02.mp4",
+                        "gotoStep": "recorder",
+                        "time": 8000
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "tiger|yes",
+                        "keyWords": "tiger",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s04.mp4",
+                        "time": 6000,
+                        "gotoStep": "ask1"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s03.mp4",
+                        "time": 8000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s05.mp4",
+                        "time": 17000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "orange|yes",
+                        "keyWords": "orange",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s06.mp4",
+                        "time": 9000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p07-s07.mp4",
+                        "time": 5000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 6,
+        "videoList": [
+            "p08-s01.mp4",
+            "p08-s02.mp4",
+            "p08-s03-b01.mp4",
+            "p08-s03-b02.mp4",
+            "p08-s04-b01.mp4",
+            "p08-s04-b02.mp4",
+            "p08-s05.mp4",
+            "p08-s06-b01.mp4",
+            "p08-s06-b02.mp4",
+            "p08-s06-b03.mp4",
+            "p08-s06-b04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickPre": [
+                    {
+                        "type": "ActionCounter",
+                        "runCount": 4,
+                        "gotoStep": "allClick"
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 1,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 3000,
+                        "url": "p08-s01.mp4"
+                    },
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 5000,
+                        "runCount": 1,
+                        "timeOutGoto": "timeOut",
+                        "gotoStep": "allClick",
+                        "keys": [
+                            {
+                                "key": "startMask",
+                                "path": [
+                                    "startMask",
+                                    "6-UIContainer",
+                                    "6"
+                                ],
+                                "pos": [
+                                    150,
+                                    200
+                                ],
+                                "gotoStep": "startMask"
+                            },
+                            {
+                                "key": "cardbg_0",
+                                "path": [
+                                    "cardbg_0",
+                                    "6-UIContainer",
+                                    "6"
+                                ],
+                                "pos": [
+                                    0,
+                                    160
+                                ],
+                                "gotoStep": "cardbg_0"
+                            },
+                            {
+                                "key": "cardbg_1",
+                                "path": [
+                                    "cardbg_1",
+                                    "6-UIContainer",
+                                    "6"
+                                ],
+                                "pos": [
+                                    0,
+                                    160
+                                ],
+                                "gotoStep": "cardbg_1"
+                            },
+                            {
+                                "key": "cardbg_2",
+                                "path": [
+                                    "cardbg_2",
+                                    "6-UIContainer",
+                                    "6"
+                                ],
+                                "pos": [
+                                    0,
+                                    160
+                                ],
+                                "gotoStep": "cardbg_2"
+                            },
+                            {
+                                "key": "cardbg_3",
+                                "path": [
+                                    "cardbg_3",
+                                    "6-UIContainer",
+                                    "6"
+                                ],
+                                "pos": [
+                                    0,
+                                    160
+                                ],
+                                "gotoStep": "cardbg_3"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut",
+                        "gotoStep": "click"
+                    }
+                ],
+                "allClick": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "allClick"
+                    },
+                    {
+                        "type": "ActionChangePage"
+                    }
+                ],
+                "startMask": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "startMask"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "startMask",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter",
+                        "gotoStep": "click"
+                    }
+                ],
+                "cardbg_0": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "cardbg_0"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "cardbg_0",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s02.mp4",
+                        "time": 3500
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s03-b02.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder_0"
+                    }
+                ],
+                "cardbg_1": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "cardbg_1"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "cardbg_1",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s02.mp4",
+                        "time": 3500
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s03-b01.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder_1"
+                    }
+                ],
+                "cardbg_2": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "cardbg_2"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "cardbg_2",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s02.mp4",
+                        "time": 3500
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s03-b01.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder_2"
+                    }
+                ],
+                "cardbg_3": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "cardbg_3"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "cardbg_3",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s02.mp4",
+                        "time": 3500
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s03-b02.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder_3"
+                    }
+                ],
+                "recorder_0": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed_0",
+                        "allFailedGotoStep": "recorderSucess_0"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess_0"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s04-b02.mp4",
+                        "time": 14000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "tiger|taige|taiger|yes",
+                        "keyWords": "tiger|taige|taiger|yes",
+                        "time": 5000
+                    }
+                ],
+                "recorder_1": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed_1",
+                        "allFailedGotoStep": "recorderSucess_1"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess_1"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s04-b01.mp4",
+                        "time": 16000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "tiger|taige|taiger|yes",
+                        "keyWords": "tiger|taige|taiger|yes",
+                        "time": 5000
+                    }
+                ],
+                "recorder_2": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed_2",
+                        "allFailedGotoStep": "recorderSucess_2"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess_2"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s04-b01.mp4",
+                        "time": 16000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "monkey|mangking|moking|yes",
+                        "keyWords": "monkey|mangking|moking|yes",
+                        "time": 5000
+                    }
+                ],
+                "recorder_3": [
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed_3",
+                        "allFailedGotoStep": "recorderSucess_3"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess_3"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s04-b02.mp4",
+                        "time": 14000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "monkey|mangking|moking|yes",
+                        "keyWords": "monkey|mangking|moking|yes",
+                        "time": 5000
+                    }
+                ],
+                "recorderFailed_0": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed_0"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s05.mp4",
+                        "time": 4000,
+                        "gotoStep": "recorder_0"
+                    }
+                ],
+                "recorderFailed_1": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed_1"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s05.mp4",
+                        "time": 4000,
+                        "gotoStep": "recorder_1"
+                    }
+                ],
+                "recorderFailed_2": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed_2"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s05.mp4",
+                        "time": 4000,
+                        "gotoStep": "recorder_2"
+                    }
+                ],
+                "recorderFailed_3": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed_3"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s05.mp4",
+                        "time": 4000,
+                        "gotoStep": "recorder_3"
+                    }
+                ],
+                "recorderSucess_0": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess_0"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s06-b01.mp4",
+                        "time": 10000,
+                        "gotoStep": "clickPre"
+                    }
+                ],
+                "recorderSucess_1": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess_1"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s06-b03.mp4",
+                        "time": 9000,
+                        "gotoStep": "clickPre"
+                    }
+                ],
+                "recorderSucess_2": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess_2"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s06-b04.mp4",
+                        "time": 9000,
+                        "gotoStep": "clickPre"
+                    }
+                ],
+                "recorderSucess_3": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess_3"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "6-UIContainer",
+                            "6"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p08-s06-b02.mp4",
+                        "time": 10000,
+                        "gotoStep": "clickPre"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 7,
+        "videoList": [
+            "p11-s01.mp4",
+            "p11-s02.mp4",
+            "p11-s03.mp4",
+            "p11-s04.mp4",
+            "p11-s05.mp4",
+            "p11-s06.mp4",
+            "p11-s07.mp4",
+            "p11-s08.mp4",
+            "p11-s09.mp4",
+            "p11-s01-b02.mp4",
+            "p11-s03-b02.mp4",
+            "p11-s07-b02.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s01.mp4",
+                        "time": 10000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 14000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "child_2",
+                                "path": [
+                                    "child_2",
+                                    "7-UIContainer",
+                                    "7"
+                                ],
+                                "gotoStep": "clickSnake"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 1000,
+                        "url": "p11-s01-b02.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickSnake": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickSnake"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "child_2",
+                            "7-UIContainer",
+                            "7"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s02.mp4",
+                        "time": 16000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s03.mp4",
+                        "gotoStep": "recorder",
+                        "time": 9500
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "hello|snake|yes",
+                        "keyWords": "hello|snake",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s03-b02.mp4",
+                        "time": 3000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionWaiting",
+                        "gotoStep": "recorder1"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    }
+                ],
+                "recorder1": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless1"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess1",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed1"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess1"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s04.mp4",
+                        "time": 6000
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "yes",
+                        "keyWords": "yes",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless1": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless1",
+                        "gotoStep": "recorder1"
+                    }
+                ],
+                "recorderFailed1": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s06.mp4",
+                        "time": 7000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s07.mp4",
+                        "time": 15000,
+                        "gotoStep": "recorder2"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess1": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s05.mp4",
+                        "time": 5000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s07.mp4",
+                        "time": 15000,
+                        "gotoStep": "recorder2"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    }
+                ],
+                "recorder2": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless2"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess2",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed2"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess2"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "green|yes",
+                        "keyWords": "green|yes",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless2": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s07-b02.mp4",
+                        "time": 11000,
+                        "gotoStep": "recorder2"
+                    }
+                ],
+                "recorderFailed2": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s08.mp4",
+                        "time": 10500,
+                        "gotoStep": "recorder2"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess2": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p11-s09.mp4",
+                        "time": 6500
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 8,
+        "videoList": [
+            "p12-s01.mp4",
+            "p12-s02.mp4",
+            "p12-s03.mp4",
+            "p12-s04-b01.mp4",
+            "p12-s04-b02.mp4",
+            "p12-s04-b03.mp4",
+            "p12-s05.mp4",
+            "p12-s06.mp4",
+            "p12-s07.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s01.mp4",
+                        "time": 6000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 3000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "turningPointerId",
+                                "path": [
+                                    "turningPointerId",
+                                    "TurnWheelContainer",
+                                    "LotteryUIContainer",
+                                    "8-UIContainer",
+                                    "8"
+                                ],
+                                "pos": [
+                                    20,
+                                    20
+                                ],
+                                "gotoStep": "clickMiddle"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 6000,
+                        "url": "p12-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickMiddle": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickMiddle"
+                    },
+                    {
+                        "type": "ActionResetCounter",
+                        "clearClickListens": true
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "turningPointerId",
+                            "TurnWheelContainer",
+                            "LotteryUIContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s02.mp4",
+                        "gotoStep": "recorder",
+                        "time": 7000
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s03.mp4",
+                        "time": 7500
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "i|can|see|a|monkey|moken|moking|yes",
+                        "keyWords": "i|can|see|a|monkey|moken|moking",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless",
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s04-b03.mp4",
+                        "time": 8000,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s05.mp4",
+                        "time": 3000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 500
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "btnContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 500
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s01.mp4",
+                        "time": 6000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 3000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "turningPointerId",
+                                "path": [
+                                    "turningPointerId",
+                                    "TurnWheelContainer",
+                                    "LotteryUIContainer",
+                                    "8-UIContainer",
+                                    "8"
+                                ],
+                                "pos": [
+                                    20,
+                                    20
+                                ],
+                                "gotoStep": "clickMiddle"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 6000,
+                        "url": "p12-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickMiddle": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickMiddle"
+                    },
+                    {
+                        "type": "ActionResetCounter",
+                        "clearClickListens": true
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "turningPointerId",
+                            "TurnWheelContainer",
+                            "LotteryUIContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s02.mp4",
+                        "gotoStep": "recorder",
+                        "time": 7000
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s03.mp4",
+                        "time": 7500
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "i|can|see|a|snake|yes",
+                        "keyWords": "i|can|see|a|snake",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless",
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s04-b02.mp4",
+                        "time": 9000,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s06.mp4",
+                        "time": 4000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 500
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "btnContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 500
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s01.mp4",
+                        "time": 6000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 3000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "turningPointerId",
+                                "path": [
+                                    "turningPointerId",
+                                    "TurnWheelContainer",
+                                    "LotteryUIContainer",
+                                    "8-UIContainer",
+                                    "8"
+                                ],
+                                "pos": [
+                                    20,
+                                    20
+                                ],
+                                "gotoStep": "clickMiddle"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 6000,
+                        "url": "p12-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickMiddle": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickMiddle"
+                    },
+                    {
+                        "type": "ActionResetCounter",
+                        "clearClickListens": true
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "turningPointerId",
+                            "TurnWheelContainer",
+                            "LotteryUIContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s02.mp4",
+                        "gotoStep": "recorder",
+                        "time": 7000
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s03.mp4",
+                        "time": 7500
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "i|can|see|a|tiger|yes",
+                        "keyWords": "i|can|see|a|tiger",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless",
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s04-b01.mp4",
+                        "time": 7500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p12-s07.mp4",
+                        "time": 3000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 500
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "btnContainer",
+                            "8-UIContainer",
+                            "8"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 500
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 9,
+        "videoList": [
+            "p13-s01.mp4",
+            "p13-s02.mp4",
+            "p13-s03.mp4",
+            "p13-s04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p13-s01.mp4",
+                        "time": 3000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 4000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "child_2",
+                                "path": [
+                                    "child_2",
+                                    "9-UIContainer",
+                                    "9"
+                                ],
+                                "gotoStep": "clickParrot"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 3000,
+                        "url": "p13-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickParrot": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickParrot"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "child_2",
+                            "9-UIContainer",
+                            "9"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p13-s02.mp4",
+                        "time": 12000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "parrot|yes",
+                        "keyWords": "parrot",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p13-s02.mp4",
+                        "time": 12000,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p13-s03.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p13-s04.mp4",
+                        "time": 6000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 10,
+        "videoList": [
+            "p14-s01.mp4",
+            "p14-s02-b01.mp4",
+            "p14-s02-b02.mp4",
+            "p14-s02-b03.mp4",
+            "p14-s02-b04.mp4",
+            "p14-s03-b01.mp4",
+            "p14-s03-b02.mp4",
+            "p14-s03-b03.mp4",
+            "p14-s03-b04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "tiger|yes",
+                        "keyWords": "tiger",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s02-b04.mp4",
+                        "time": 7500
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s03-b04.mp4",
+                        "time": 11000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "nextBtn",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "parrot|yes",
+                        "keyWords": "parrot",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s02-b02.mp4",
+                        "time": 6000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s03-b02.mp4",
+                        "time": 11000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "nextBtn",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "snake|yes",
+                        "keyWords": "snake",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s02-b03.mp4",
+                        "time": 7000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s03-b03.mp4",
+                        "time": 11000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "nextBtn",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            },
+            {
+                "start": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "monkey|yes",
+                        "keyWords": "monkey",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s02-b01.mp4",
+                        "time": 7000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s01.mp4",
+                        "time": 6500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "correctBtn",
+                            "correctPanelContainer",
+                            "10-UIContainer",
+                            "10"
+                        ]
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p14-s03-b01.mp4",
+                        "time": 11000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 11,
+        "videoList": [
+            "p18-s01.mp4",
+            "p18-s02.mp4",
+            "p18-s03.mp4",
+            "p18-s04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p18-s01.mp4",
+                        "time": 2000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 3000,
+                        "timeOutGoto": "timeOut",
+                        "runCount": 1,
+                        "keys": [
+                            {
+                                "key": "child_1",
+                                "path": [
+                                    "child_1",
+                                    "11-UIContainer",
+                                    "11"
+                                ],
+                                "gotoStep": "clickDino"
+                            }
+                        ]
+                    }
+                ],
+                "timeOut": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "timeOut"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "time": 4000,
+                        "url": "p18-s01.mp4",
+                        "gotoStep": "click"
+                    }
+                ],
+                "clickDino": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "clickDino"
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "child_1",
+                            "11-UIContainer",
+                            "11"
+                        ]
+                    },
+                    {
+                        "type": "ActionResetCounter"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p18-s02.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "see|yes",
+                        "keyWords": "see",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p18-s02.mp4",
+                        "time": 9000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p18-s03.mp4",
+                        "time": 7000,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p18-s04.mp4",
+                        "time": 3500
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 12,
+        "videoList": [
+            "p19-s01-b01.mp4",
+            "p19-s01-b02.mp4",
+            "p19-s01-b03.mp4",
+            "p19-s01-b04.mp4",
+            "p19-s02.mp4",
+            "p19-s03-b01.mp4",
+            "p19-s03-b02.mp4",
+            "p19-s03-b03.mp4",
+            "p19-s03-b04.mp4",
+            "p19-s04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionCoursewareDrag",
+                        "path": [
+                            "rect2",
+                            "rect1",
+                            "c1",
+                            "12-UIContainer",
+                            "12"
+                        ],
+                        "beginPos": {
+                            "x": 347,
+                            "y": 680
+                        },
+                        "endPos": {
+                            "x": 447,
+                            "y": 368
+                        },
+                        "time": 1000
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p19-s01.mp4",
+                        "time": 8000,
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorder": [
+                    {
+                        "type": "ActionRecorderVoiceless",
+                        "runCount": 1,
+                        "allViocelessGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderVoiceless"
+                    },
+                    {
+                        "type": "ActionRecorderFailed",
+                        "scores": [
+                            0,
+                            11
+                        ],
+                        "runCount": 1,
+                        "allFailedGotoStep": "recorderSucess",
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderFailed"
+                    },
+                    {
+                        "type": "ActionRecorderSucess",
+                        "scores": [
+                            12,
+                            100
+                        ],
+                        "waitingToCompleted": false,
+                        "gotoStep": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p19-s02.mp4",
+                        "time": 3500
+                    },
+                    {
+                        "type": "ActionRecorderStart",
+                        "refText": "i|see|a|monkey|yes",
+                        "keyWords": "i|see|a|monkey",
+                        "mergeVoicelessAndFailed": false,
+                        "time": 5000
+                    }
+                ],
+                "recorderVoiceless": [
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderVoiceless",
+                        "gotoStep": "recorder"
+                    }
+                ],
+                "recorderFailed": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p19-s03-b04.mp4",
+                        "time": 5500,
+                        "gotoStep": "recorder"
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderFailed"
+                    }
+                ],
+                "recorderSucess": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p19-s04.mp4",
+                        "time": 5000
+                    },
+                    {
+                        "type": "AcitonConsole",
+                        "text": "recorderSucess"
+                    },
+                    {
+                        "type": "ActionNextStep"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "index": 13,
+        "videoList": [
+            "p31-s01.mp4",
+            "p31-s02.mp4",
+            "p31-s03.mp4",
+            "p31-s04.mp4"
+        ],
+        "stepList": [
+            {
+                "start": [
+                    {
+                        "type": "ActionFace"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p31-s01.mp4",
+                        "time": 17000,
+                        "gotoStep": "click"
+                    }
+                ],
+                "click": [
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p31-s02.mp4",
+                        "time": 11000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "cameraBtn",
+                            "13-UIContainer",
+                            "13"
+                        ]
+                    },
+                    {
+                        "type": "ActionWaiting",
+                        "time": 10000,
+                        "gotoStep": "listern"
+                    },
+                    {
+                        "type": "ActionPlayVideo",
+                        "url": "p31-s03.mp4",
+                        "interactiveAction": true,
+                        "time": 11000
+                    },
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "sayGoodbyBtn",
+                            "13-UIContainer",
+                            "13"
+                        ],
+                        "interactiveAction": true
+                    }
+                ],
+                "listern": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 99999999,
+                        "keys": [
+                            {
+                                "key": "downloadBtn",
+                                "path": [
+                                    "downloadBtn",
+                                    "13-UIContainer",
+                                    "13"
+                                ],
+                                "pos": [
+                                    150,
+                                    40
+                                ]
+                            }
+                        ],
+                        "gotoStep": "clickDownLoad",
+                        "waitingToCompleted": false
+                    }
+                ],
+                "listernNext": [
+                    {
+                        "type": "ActionCursewareClickEvent",
+                        "time": 99999999,
+                        "runCount": 99,
+                        "keys": [
+                            {
+                                "key": "downloadBtn",
+                                "path": [
+                                    "downloadBtn",
+                                    "13-UIContainer",
+                                    "13"
+                                ]
+                            }
+                        ],
+                        "gotoStep": "clickDownLoad",
+                        "showPointerGuild": false
+                    }
+                ],
+                "clickDownLoad": [
+                    {
+                        "type": "ActionCoursewareClick",
+                        "path": [
+                            "downloadBtn",
+                            "13-UIContainer",
+                            "13"
+                        ],
+                        "interactiveAction": true
+                    },
+                    {
+                        "type": "ActionResetCounter",
+                        "clearClickListens": true,
+                        "gotoStep": "listernNext",
+                        "interactiveAction": true
+                    }
+                ]
+            }
+        ]
+    }
+]
